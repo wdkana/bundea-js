@@ -1,0 +1,280 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-image: url("windows-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #d2d2d2;
+  border-top: 1px solid #222;
+}
+
+.menu {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  bottom: 100%;
+  background-color: #d2d2d2;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-color: #616161;
+  text-align: center;
+}
+
+.accent {
+  position: absolute;
+  width: 7px;
+  height: 100%;
+  background-color: slateblue;
+}
+
+.menu>a {
+  text-decoration: none;
+  color: #222;
+  font-size: 20px;
+  letter-spacing: 1.1px;
+  padding: 15px;
+}
+
+.menu>a>img {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  float: left;
+}
+
+.menu>a:hover {
+  background-color: slateblue;
+  color: #e0e0e0;
+}
+
+.toolbar {
+  display: flex;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.headline {
+  width: 100%;
+}
+
+.menuButton>button {
+  padding: 10px;
+  border: none;
+  font-weight: 700;
+  border-right: 1px solid #444444;
+  cursor: pointer;
+  color: slateblue;
+  background-color: #d2d2d2;
+  z-index: 10;
+  position: absolute;
+}
+
+.menuButton>button:hover {
+  background-color: slateblue;
+  color: #e0e0e0;
+}
+
+.marquee {
+  position: relative;
+  -moz-animation: marquee 21s linear infinite;
+  -webkit-animation: marquee 21s linear infinite;
+  animation: marquee 21s linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@-moz-keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%)
+  }
+
+  100% {
+    -moz-transform: translateX(-11%);
+    -webkit-transform: translateX(-11%);
+    transform: translateX(-11%);
+  }
+}
+
+.time {
+  background-color: #d2d2d2;
+  border-left: 1px solid #444444;
+  z-index: 100;
+}
+
+.time>p {
+  font-size: 12px;
+  padding: 8px;
+}
+
+.windowContainer {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 95%;
+  height: auto;
+}
+
+.window {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #eaeaea;
+  color: black;
+  border-top: 2px solid slateblue;
+}
+
+.windowTable {
+  overflow-x: auto;
+}
+
+.windowBar {
+  width: 100%;
+  height: 32px;
+  background-color: #eaeaea;
+  border-bottom: 2px solid #444444;
+}
+
+.windowClose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3px;
+  background-color: #f7f7f7;
+  color: black;
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.windowClose:hover {
+  background-color: orangered;
+  color: white;
+}
+
+.windowTable table {
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  /* border: 1px solid #ddd; */
+}
+
+.windowTable th {
+  color: #D5DDE5;
+  background: #1b1e24;
+  border-bottom: 4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size: 23px;
+  font-weight: 100;
+  padding: 24px;
+  text-align: left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align: middle;
+}
+
+.windowTable th:last-child {
+  border-right: none;
+}
+
+
+.windowTable th,
+td {
+  text-align: left;
+  padding: 10px;
+}
+
+.windowTable tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+
+.myComputerContainer {
+  background-color: white;
+  height: 500px;
+}
+
+.myComputerHeader {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  background: #f7f7f7;
+}
+
+.myComputer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.myComputer>div:nth-child(1) {
+  position: relative;
+  width: 200px;
+  height: 35px;
+  display: flex;
+  background-color: #eaeaea;
+}
+
+.myComputer>div>img {
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.myComputer>div:nth-child(1)>h3 {
+  margin: 5px;
+  position: absolute;
+  top: 3px;
+  left: 40px;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.myComputer>div:nth-child(2) {
+  padding: 25px;
+  margin: 10px;
+  width: 50%;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Back To Basic</title>
+  </head>
+  <body id="myPC">
+    <div id="turnOnContainer"></div>
+    <div class="container" id="bg">
+      <!-- windows open -->
+      <div class="windowContainer" id="myComputerContainer">
+        <div class="window">
+          <div class="windowTable">
+            <div class="windowBar">
+              <div class="windowClose" id="myComputerClose">✖</div>
+            </div>
+            <div class="myComputerContainer">
+              <div class="myComputerHeader">atas</div>
+              <div class="myComputer">
+                <div>
+                  <img src="assets/img/menu/computer.png" alt="computer" />
+                  <h3>
+                    This PC
+                  </h3>
+                </div>
+                <div>
+                  <img src="assets/img/mycomputer/hdd1.png" alt="computer" />
+                  <p>
+                    30Gb of 300Gb
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="windowContainer" id="peripheralContainer">
+        <div class="window">
+          <div class="windowTable">
+            <div class="windowBar">
+              <div class="windowClose" id="peripheralClose">✖</div>
+            </div>
+            <table>
+              <tr>
+                <th>Mouse</th>
+                <th>Keyboard</th>
+                <th>Microphone</th>
+                <th>Headphone</th>
+                <th>Audio Interface</th>
+                <th>Monitor</th>
+                <th>Power Option</th>
+              </tr>
+              <tr>
+                <td>Logitech MX Master 3</td>
+                <td>Fizz 60% RGB</td>
+                <td>Shure MV7</td>
+                <td>Takstar HD2000</td>
+                <td>XOX BP3</td>
+                <td>Asus TUF Gaming 144Hz 24inch</td>
+                <td>ICA 1400</td>
+              </tr>
+              <tr>
+                <td>Logitech K400+</td>
+                <td>Logitech K400+</td>
+                <td>Ckmova LCM6 Lav</td>
+                <td>Sennheiser HD202</td>
+                <td>-</td>
+                <td>BenQ GW2785TC 75Hz 27inch</td>
+                <td>APC Stabilizer 700W</td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>Maono PM36TR</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Xiaomi 24inch</td>
+                <td>-</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="windowContainer" id="hwContainer">
+        <div class="window">
+          <div class="windowTable">
+            <div class="windowBar">
+              <div class="windowClose" id="hwClose">✖</div>
+            </div>
+            <table>
+              <tr>
+                <th>Power Option</th>
+              </tr>
+              <tr>
+                <td>ICA 1400</td>
+              </tr>
+              <tr>
+                <td>APC Stabilizer 700W</td>
+              </tr>
+              <tr>
+                <td>Xiaomi 24inch</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- end-of-windows-open -->
+      <!-- taskbar-menu -->
+      <div class="taskbar" id="taskbar">
+        <div class="menu" id="menu">
+          <div class="accent"></div>
+          <a href="#" id="myComputerButton"><img
+              src="assets/img/menu/computer.png" alt="My Computer"
+              />My
+            Computer</a>
+          <a href="#" id="hwButton"><img src="assets/img/menu/mobo.png" alt="hw
+              monitor" />HW
+            Monitor</a>
+          <a href="#" id="peripheralButton"><img
+              src="assets/img/menu/keyboard.png"
+              alt="Peripheral" />Peripheral</a>
+          <div>_____________________</div>
+          <a href="#" id="shutdown"><img src="assets/img/menu/off.png"
+              alt="Peripheral" />Shutdown</a>
+        </div>
+        <div class="toolbar">
+          <div class="menuButton">
+            <button id="menuButton">MENU</button>
+          </div>
+          <div class="headline">
+            <p class="marquee">**** marquee ****</p>
+          </div>
+          <div class="time">
+            <p id="clock"></p>
+          </div>
+        </div>
+      </div>
+      <!-- end-of-taskbar-menu -->
+    </div>
+    <script src="classes/Computer/Main.js" type="module"></script>
+    <script src="classes/Computer/Time.js" type="module"></script>
+    <script src="os.js" type="module"></script>
+  </body>
+</html>
